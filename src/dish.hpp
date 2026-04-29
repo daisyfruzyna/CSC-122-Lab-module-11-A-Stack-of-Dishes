@@ -8,7 +8,9 @@ class Dish {
     Dish(std::string description) {
       this->description = description;
     }
-
+    Dish() {
+      description = "";
+    };
     std::string get_description() {
       return this->description;
     }

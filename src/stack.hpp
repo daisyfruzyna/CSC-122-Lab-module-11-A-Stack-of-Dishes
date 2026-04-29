@@ -1,15 +1,16 @@
 #include <iostream>
 #include <ostream>
+// #include "dish.hpp"
 
 // #include "../cmake-build-debug/_deps/catch2-src/src/catch2/internal/catch_windows_h_proxy.hpp"
 //
 // Created by daisy on 4/28/2026.
 //
-const int MAX_SIZE = 100;
+
 
 #ifndef A_STACK_OF_DISHES_STACK_HPP
 #define A_STACK_OF_DISHES_STACK_HPP
-
+const int MAX_SIZE = 100;
 template <typename S>
 
 class Stack {
@@ -30,6 +31,9 @@ class Stack {
   bool isFull() {
     return (start + MAX_SIZE == top);
   }
+  int size() {
+    return top - start;
+  }
   void push(S newItem) {
     if (isFull()) {
       std::cout << "Stack is full." << std::endl;
@@ -44,6 +48,7 @@ class Stack {
       return temp;
     }
     std::cout << "Stack is empty." << std::endl;
+    throw "Stack is empty.";
   }
   S peek() {
     if (!isEmpty()) {
@@ -53,8 +58,13 @@ class Stack {
       return temp;
     }
     std::cout << "Stack is empty." << std::endl;
+    throw "Stack is empty.";
   }
+  void clear() {
+    top = array;
+    start = array;
 
+  }
 };
 
 
