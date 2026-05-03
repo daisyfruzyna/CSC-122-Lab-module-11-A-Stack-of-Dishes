@@ -6,9 +6,10 @@
 
 using namespace std;
 int main() {
-  std::cout << hello() << std::endl;
+  // std::cout << hello() << std::endl;
 
   Stack<Dish> stack;
+    // stack.pop();
   // std::cout << stack.size() << std::endl;
   // stack.push("'a'");
   // stack.push("'b'");
